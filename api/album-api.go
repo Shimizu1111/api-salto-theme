@@ -1,5 +1,7 @@
-// package album
+package album
 
-// func getapi() {
-// 	fmt.Prin
-// }
+import "fmt"
+
+func getapi() {
+	fmt.Println("helloapi")
+}
