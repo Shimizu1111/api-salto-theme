@@ -4,9 +4,11 @@ services:
     build: .
     tty: true # コンテナを永続化
     volumes:
-      - ./app:/go/src/app 
+      - ./:/go/src/api-salto-theme
     depends_on:
       - db
+    ports:
+      - "8080:8080"
   
   db:
     image: mysql:5.7

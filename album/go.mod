@@ -1,14 +1,11 @@
-module github.com/api-salto-theme
+module github.com/api-salto-theme/album
 
 go 1.17
 
-replace github.com/api-salto-theme/album => ./album
-
-require github.com/api-salto-theme/album v0.0.0-00010101000000-000000000000
+require github.com/gin-gonic/gin v1.7.7
 
 require (
 	github.com/gin-contrib/sse v0.1.0 // indirect
-	github.com/gin-gonic/gin v1.7.7 // indirect
 	github.com/go-playground/locales v0.13.0 // indirect
 	github.com/go-playground/universal-translator v0.17.0 // indirect
 	github.com/go-playground/validator/v10 v10.4.1 // indirect

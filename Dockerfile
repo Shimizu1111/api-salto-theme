@@ -7,7 +7,12 @@ RUN mkdir /go/src/api-salto-theme
 # ワーキングディレクトリの設定
 WORKDIR /go/src/api-salto-theme
 # ホストのファイルをコンテナの作業ディレクトリに移行
-ADD . /go/src/api-salto-theme
+ADD ./ /go/src/api-salto-theme
 
-RUN GO111MODULE=off go get github.com/oxequa/realize
-CMD ["realize", "start"]
+# ファイル編集する際のホットリロード機能
+# RUN GO111MODULE=off go get github.com/oxequa/realize
+# CMD ["realize", "start"]
+
+# APIの立ち上げ
+EXPOSE 8080
+CMD ["go", "run", "cmd/main.go"]
