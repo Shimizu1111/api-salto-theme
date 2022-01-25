@@ -22,8 +22,11 @@ import (
 // }
 
 func main() {
+	db := SqlConnect()
+	defer db.Close()
 	fmt.Println("Hello golang from docker!")
-	album.Getapi()
+	album.Api(db)
+
 	// albums slice to seed record album data.
 
 	// router := gin.Default()

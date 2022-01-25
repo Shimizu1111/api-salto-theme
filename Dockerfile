@@ -15,4 +15,4 @@ ADD ./ /go/src/api-salto-theme
 
 # APIの立ち上げ
 EXPOSE 8080
-CMD ["go", "run", "cmd/main.go"]
+CMD ["go", "run", "./cmd"]
