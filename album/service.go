@@ -57,7 +57,13 @@ func postAlbumDatas(c *gin.Context, db *gorm.DB) {
 	dbInit(db)
 	db.AutoMigrate(&albumData{})
 	// Insert処理
-	db.Debug().Create(&albumData{ID: newAlbum.ID, Title: newAlbum.Title, Artist: newAlbum.Artist, Price: newAlbum.Price})
+	// TODO: ネットワークエラーかDB接続エラーかなどのエラーハンドリングを追加
+	if err := db.Debug().Create(&albumData{ID: newAlbum.ID, Title: newAlbum.Title, Artist: newAlbum.Artist, Price: newAlbum.Price}).Error; err != nil {
+		fmt.Println("insertのエラーです。", err)
+	}
+	// if err != nil {
+	// 	fmt.Println("エラーです。", err)
+	// }
 
 	// Add the new album to the slice.
 	albumDatas = append(albumDatas, newAlbum)
@@ -82,8 +88,6 @@ func getAlbumByID(c *gin.Context) {
 
 // DBの初期化
 func dbInit(db *gorm.DB) {
-	// コネクション解放解放
-	// defer db.Close()
 	db.Debug().AutoMigrate(&albumData{}) //構造体に基づいてテーブルを作成
 	fmt.Println("テーブル挿入後")
 }
