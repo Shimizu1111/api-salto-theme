@@ -40,12 +40,6 @@ jobs:
           name: goのビルド
           command: docker exec repo_app_1 go build -o main cmd/main.go cmd/db_connector.go
       - run:
-          name: ls
-          command: ls -la
-      - run:
-          name: lsコンテナ内で
-          command: ls -la
-      - run:
           name: ビルドしたファイルをデプロイ
           command: sh shell/deploy.sh
       
