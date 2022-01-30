@@ -6,7 +6,7 @@
 
 
 # ファイル転送(ローカルからリモート)
-scp  ./cmd ec2-user@13.115.122.171:~/api-salto-theme/cmd
+scp ./main ec2-user@13.115.122.171:~/api-salto-theme/cmd
 # scp -i "../shmizu1111.pem" ./main ec2-user@13.115.122.171:~/api-salto-theme/main
 
 # ファイル転送(リモートからリモート)
