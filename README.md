@@ -13,7 +13,7 @@ albumに関してのAPIを叩けるプロダクトになります。
   * Docker
   * Docker Compose
 * CI/CD
-  * CircleCI
+  * CircleCI(自動ビルド・自動デプロイ)
 * 言語
   * Go
 
@@ -56,5 +56,4 @@ curl --request POST 'http://{ipアドレス}:8080/albums' \
 ```
 curl --request GET 'http://{ipアドレス}:8080/albums/2'
 ```
-
 
