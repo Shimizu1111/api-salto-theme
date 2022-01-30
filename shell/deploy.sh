@@ -4,8 +4,9 @@
 # ssh -o "StrictHostKeyChecking no" -i "../shmizu1111.pem" ec2-user@13.115.122.171
 # ssh -i "../shmizu1111.pem" ec2-user@13.115.122.171 git -C api-salto-theme status
 
-
-ssh ec2-user@13.115.122.171 git -C git pull
+ssh ec2-user@13.115.122.171 git -C git stash -u 
+ssh ec2-user@13.115.122.171 git -C git pull origin master
+ssh ec2-user@13.115.122.171 git -C git stash apply stash@{0}
 # ファイル転送(ローカルからリモート)
 scp ./main ec2-user@13.115.122.171:~/api-salto-theme/cmd
 # scp -i "../shmizu1111.pem" ./main ec2-user@13.115.122.171:~/api-salto-theme/main
