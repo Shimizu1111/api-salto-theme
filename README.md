@@ -1,12 +1,33 @@
 # api-salto-them
 
-### インフラ環境
+### 概要
+albumに関してのAPIを叩けるプロダクトになります。
+
+### 仕様技術
 * インフラ環境(terraform化, IaC)
-https://github.com/Shimizu1111/tf-api-salto-theme
+  * [terraform化したプロダクト](https://github.com/Shimizu1111/tf-api-salto-theme)
+  * 使用技術
+    * EC2
+    * VPC
+* コンテナ仮想化
+  * Docker
+  * Docker Compose
+* CI/CD
+  * CircleCI
+* 言語
+  * Go
 
 ### 動作方法
+* PRを出す
+```
+EC2の起動(EC2を起動しないとCIが通らない)
+PRを出す
+CIでエラーが出ていないことを確認
+マージ
+```
 * 起動(ビルド時のみ)
 ```
+EC2の起動
 docker-compose up -d (--build)
 ```
 * 停止
