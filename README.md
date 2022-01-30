@@ -56,3 +56,7 @@ curl --request POST 'http://{ipアドレス}:8080/albums' \
 ```
 curl --request GET 'http://{ipアドレス}:8080/albums/2'
 ```
+
+
+
+foaoijfieajoijfeijifjejfjej
