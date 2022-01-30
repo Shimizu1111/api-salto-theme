@@ -27,8 +27,17 @@ jobs:
             chmod +x ~/docker-compose
             sudo mv ~/docker-compose /usr/local/bin/docker-compose
       - run:
+          name: ls
+          command: ls -la
+      - run:
           name: directory move
           command: cd /go/src/api-salto-theme
+      - run:
+          name: ls2
+          command: ls -la
+      - run:
+          name: tree
+          command: tree
       - run:
           name: Start all services declared in docker-compose.yml
           command: docker-compose up -d --build
