@@ -20,6 +20,7 @@ albumに関してのAPIを叩けるプロダクトになります。
 ### 動作方法
 * PRを出す
 ```
+shell/deploy.shファイルに IP_ADDRESSES=""を記載
 EC2の起動(EC2を起動しないとCIが通らない)
 PRを出す
 CIでエラーが出ていないことを確認
@@ -28,6 +29,7 @@ CIでエラーが出ていないことを確認
 * 起動(ビルド時のみ)
 ```
 EC2の起動
+shell/deploy.shファイルに IP_ADDRESSES=""を記載
 docker-compose up -d (--build)
 ```
 * 停止
