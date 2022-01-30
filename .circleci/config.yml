@@ -28,19 +28,16 @@ jobs:
             sudo mv ~/docker-compose /usr/local/bin/docker-compose
       - run:
           name: ls
-          command: ls -la
+          command: ls -
+      - run: 
+          name: pwd
+          command: pwd
       - run:
           name: directory move
-          command: cd /go/src/api-salto-theme
-      - run:
-          name: ls2
-          command: ls -la
-      - run:
-          name: tree
-          command: tree
+          command: docker-compose build
       - run:
           name: Start all services declared in docker-compose.yml
-          command: docker-compose up -d --build
+          command: docker-compose up -d
       # - run:
       #     name: Install Dependencies
       #     command: go mod download
