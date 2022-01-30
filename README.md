@@ -58,7 +58,3 @@ curl --request GET 'http://{ipアドレス}:8080/albums/2'
 ```
 
 
-
-foaoijfieajoijfeijifjejfjej
-foaoijfieajoijfeijifjejfjej
-foaoijfieajoijfeijifjejfjej
