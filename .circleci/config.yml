@@ -33,7 +33,11 @@ jobs:
       - run:
           name: これ以降CI/CDが行える
           command: ls -la
-
+      - run:
+          name: goのビルド
+          command: docker exec api-salto-theme_app_1 go build cmd/main.go cmd/db_connector.go
+      - run: ビルドしたファイルをデプロイ
+          name: scp -i "../shmizu1111.pem" ./main ec2-user@13.115.122.171:~/api-salto-theme/cmd/main
       
       - run:
           name: docker-compose down
