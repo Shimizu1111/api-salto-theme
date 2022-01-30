@@ -13,7 +13,7 @@ albumに関してのAPIを叩けるプロダクトになります。
   * Docker
   * Docker Compose
 * CI/CD
-  * CircleCI
+  * CircleCI(自動ビルド・自動デプロイ)
 * 言語
   * Go
 
