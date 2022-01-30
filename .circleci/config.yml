@@ -34,6 +34,9 @@ jobs:
           name: これ以降CI/CDが行える
           command: ls -la
       - run:
+          name: コンテナプロセス
+          command: docker-compose ps
+      - run:
           name: goのビルド
           command: docker exec api-salto-theme_app_1 go build cmd/main.go cmd/db_connector.go
       - run:
