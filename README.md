@@ -59,4 +59,16 @@ curl --request POST 'http://{ipアドレス}:8080/albums' \
 curl --request GET 'http://{ipアドレス}:8080/albums/2'
 ```
 
-テスト修正
+
+### 今後学びたい技術
+* makefileの作成
+* Rundeckの導入
+* Datadogの導入
+* GitHubのサブモジュールを使用した開発(DBをサブモジュール化して再利用できて、ローカルでの動作確認もサブモジュールで気軽にテストできるようにする)
+* redashの導入
+* jenkinsの導入
+* kibanaの導入
+* アクセストークンを取得する対応
+* umlの作成
+
+
